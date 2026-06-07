@@ -1,0 +1,33 @@
+{
+  "name": "kaosar-ahmed-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "audit": "npm audit --audit-level=moderate"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "next": "^16.2.7",
+    "nodemailer": "^8.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.7",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^3.4.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}
