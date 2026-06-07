@@ -395,6 +395,78 @@ body {
   padding-bottom: 46px;
 }
 
+.why-hire-layout {
+  display: grid;
+  align-items: end;
+  gap: 32px;
+}
+
+.why-hire-list {
+  border-top: 1px solid rgba(5, 5, 5, 0.1);
+  padding-top: 24px;
+}
+
+.why-hire-list h3 {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.why-hire-list-left h3 {
+  color: var(--accent);
+}
+
+.why-hire-list ul {
+  margin: 26px 0 0;
+  display: grid;
+  gap: 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.why-hire-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.065em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.why-hire-list-left li {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.why-hire-list b {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  flex: 0 0 auto;
+  background: var(--accent);
+}
+
+.why-hire-image {
+  position: relative;
+  height: min(48vw, 500px);
+  min-height: 390px;
+  overflow: hidden;
+  border: 1px solid rgba(5, 5, 5, 0.1);
+  border-radius: 10px;
+  background: #ddd;
+}
+
+.why-hire-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 58%, rgba(5, 5, 5, 0.16));
+  pointer-events: none;
+}
+
 .contact-intro,
 .contact-panel {
   min-height: 100%;
@@ -512,6 +584,17 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .why-hire-layout {
+    grid-template-columns: minmax(0, 0.78fr) minmax(380px, 1.18fr) minmax(0, 0.78fr);
+    gap: 40px;
+  }
+
+  .why-hire-list {
+    padding-bottom: 34px;
+  }
+}
+
 @media (max-width: 767px) {
   .process-timeline {
     gap: 54px;
@@ -541,6 +624,26 @@ body {
 
   .process-content {
     padding-bottom: 34px;
+  }
+
+  .why-hire-layout {
+    margin-top: 40px;
+  }
+
+  .why-hire-list-left li,
+  .why-hire-list li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .why-hire-list-left li {
+    flex-direction: row-reverse;
+  }
+
+  .why-hire-image {
+    order: -1;
+    height: 430px;
+    min-height: 0;
   }
 }
 

@@ -200,6 +200,22 @@ export const reasons = [
   'Able to own features end-to-end from architecture to deployment.'
 ];
 
+export const whyHireMe = {
+  image: '/profile/whyhireme.webp',
+  strengths: [
+    'Production-ready frontend engineering',
+    'Backend, database, and API understanding',
+    'Clear communication with teams and clients',
+    'Ownership from planning to deployment'
+  ],
+  reliability: [
+    'Responsive UI across real devices',
+    'Maintainable code and reusable components',
+    'Performance, SEO, and accessibility awareness',
+    'Secure data flow and clean handoff'
+  ]
+};
+
 export const about = {
   image: '/profile/convo.jpeg',
   statement: 'I build software where clean engineering, product thinking, and business value meet.',

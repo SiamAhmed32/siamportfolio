@@ -11,9 +11,9 @@ import {
   experience,
   hero,
   personalInfo,
-  reasons,
   stats,
-  techGroups
+  techGroups,
+  whyHireMe
 } from '@/data/site';
 
 function Header() {
@@ -271,24 +271,55 @@ function ExperienceSection() {
 
 function WhySection() {
   return (
-    <section className="bg-paper py-24 text-black">
-      <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-        <div>
-          <p className="section-label text-xs">Why Hire Me</p>
-          <h2 className="mt-8 text-4xl font-black leading-tight tracking-tight md:text-6xl">
-            What makes me useful inside an engineering team.
+    <section className="bg-paper py-20 text-black md:py-24">
+      <div className="container-x">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="section-label text-xs md:text-lg">Why Hire Me?</p>
+          <h2 className="display-title mt-7 text-[13vw] uppercase leading-none text-black md:text-[8.2vw] lg:text-[6vw]">
+            Choosing The Right Engineer
           </h2>
-          <a href={personalInfo.whatsappHref} target="_blank" rel="noopener noreferrer" className="light-outline-button mt-8 text-sm" aria-label="Contact Kaosar Ahmed">
+        </div>
+
+        <div className="why-hire-layout mt-12">
+          <div className="why-hire-list why-hire-list-left">
+            <h3>What I Bring</h3>
+            <ul>
+              {whyHireMe.strengths.map((item) => (
+                <li key={item}>
+                  <span>{item}</span>
+                  <b aria-hidden="true" />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="why-hire-image">
+            <Image
+              src={whyHireMe.image}
+              alt="Kaosar Ahmed"
+              width={1080}
+              height={1350}
+              className="h-full w-full object-cover object-[50%_34%]"
+            />
+          </div>
+
+          <div className="why-hire-list">
+            <h3>What Teams Can Expect</h3>
+            <ul>
+              {whyHireMe.reliability.map((item) => (
+                <li key={item}>
+                  <b aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a href="#contact" className="light-outline-button text-sm" aria-label="Contact Kaosar Ahmed">
             Contact Me
           </a>
-        </div>
-        <div className="grid border border-black/10 md:grid-cols-2">
-          {reasons.map((reason, index) => (
-            <div key={reason} className="min-h-[210px] border-b border-r border-black/10 p-8 last:border-b-0 even:border-r-0">
-              <p className="font-mono text-sm font-black text-accent">0{index + 1}</p>
-              <p className="mt-8 text-2xl font-black leading-tight">{reason}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
