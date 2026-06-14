@@ -4,6 +4,8 @@ import AnimatedStat from '@/components/AnimatedStat';
 import ContactForm from '@/components/ContactForm';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import ScrollRevealText from '@/components/ScrollRevealText';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
+import SmoothScroll from '@/components/SmoothScroll';
 import WorkShowcase from '@/components/WorkShowcase';
 import {
   about,
@@ -509,6 +511,7 @@ function Footer() {
 export default function HomePage() {
   return (
     <main>
+      <SmoothScroll />
       <a href="#home" className="skip-link">Skip to content</a>
       <Header />
       <HeroSection />
@@ -522,6 +525,7 @@ export default function HomePage() {
       <AboutSection />
       <ContactSection />
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }
